@@ -512,5 +512,12 @@ img.img-fluid.commonImg {
     padding: 5px;
     box-shadow: 6px 4px #cccc; 
 }
-        
-/* commonImg */      
+
+
+span.main-skills {
+    background-color: #ededed;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+
+/* commonImg */     
