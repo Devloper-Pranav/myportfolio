@@ -375,7 +375,7 @@ nav.navbar.navbar-expand-lg.fixed-top {
     background-color: transparent;
     border-color: var(--gray-color);
     /* color: var(--text-gray); */
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
     font-size: 15px;
     font-weight: 400;
     padding: 10px 20px;
