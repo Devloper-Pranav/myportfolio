@@ -385,7 +385,8 @@ nav.navbar.navbar-expand-lg.fixed-top {
 .contact_wrapper .form-control:focus,
 .contact_wrapper textarea:focus { 
     border-color: var(--primary-color);
-    color: var(--text-white); 
+  /*  color: var(--text-white); */
+color: var(--secondary-color); 
 }  
 .contact_wrapper .call_details{
     /* color:var(--text-gray); */
