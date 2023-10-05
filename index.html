@@ -15,7 +15,55 @@
     <!-- Custom File's Link -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-style.css">
-    
+        <!-- Bootstrap 5 JS CDN Links -->
+    <script  src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom Js Link -->
+    <script src="js/main.js"></script> 
+
+  <script> 
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // To disable F12 options
+    document.onkeypress = function (event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+    return false;
+    }
+    }
+    document.onmousedown = function (event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+    return false;
+    }
+    }
+    document.onkeydown = function (event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+    return false;
+    }
+    }
+
+    // To To Disable ctrl+c, ctrl+u
+
+    jQuery(document).ready(function($){
+    $(document).keydown(function(event) {
+    var pressedKey = String.fromCharCode(event.keyCode).toLowerCase();
+
+    if (event.ctrlKey && (pressedKey == "c" || pressedKey == "u")) {
+    alert('Sorry, This Functionality Has Been Disabled!');
+    //disable key press porcessing
+    return false;
+    }
+    });
+    }); 
+    $('body').on('dragstart drop', function(e){
+        e.preventDefault();
+        return false;
+    });
+    </script>    
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="75">
@@ -474,55 +522,7 @@
 
     <!-- Footer section exit --> 
 
-    <!-- Bootstrap 5 JS CDN Links -->
-    <script  src="https://code.jquery.com/jquery-3.7.1.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 
-    <!-- Custom Js Link -->
-    <script src="js/main.js"></script> 
-
-  <script> 
-    document.addEventListener('contextmenu', event => event.preventDefault());
-
-    // To disable F12 options
-    document.onkeypress = function (event) {
-    event = (event || window.event);
-    if (event.keyCode == 123) {
-    return false;
-    }
-    }
-    document.onmousedown = function (event) {
-    event = (event || window.event);
-    if (event.keyCode == 123) {
-    return false;
-    }
-    }
-    document.onkeydown = function (event) {
-    event = (event || window.event);
-    if (event.keyCode == 123) {
-    return false;
-    }
-    }
-
-    // To To Disable ctrl+c, ctrl+u
-
-    jQuery(document).ready(function($){
-    $(document).keydown(function(event) {
-    var pressedKey = String.fromCharCode(event.keyCode).toLowerCase();
-
-    if (event.ctrlKey && (pressedKey == "c" || pressedKey == "u")) {
-    alert('Sorry, This Functionality Has Been Disabled!');
-    //disable key press porcessing
-    return false;
-    }
-    });
-    }); 
-    $('body').on('dragstart drop', function(e){
-        e.preventDefault();
-        return false;
-    });
-    </script>    
     
 </body>
 </html>
